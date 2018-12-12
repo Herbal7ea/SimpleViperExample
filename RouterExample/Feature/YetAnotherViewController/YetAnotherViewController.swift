@@ -8,12 +8,6 @@
 
 import UIKit
 
-class YetAnotherPresenter {
-    func saveInfo() {
-        print("💻 saving")
-    }
-}
-
 class YetAnotherViewController: UIViewController {
 
     private var preseter: YetAnotherPresenter!

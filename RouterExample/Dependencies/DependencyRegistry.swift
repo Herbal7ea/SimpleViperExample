@@ -16,22 +16,30 @@ class DependencyRegistry {
     private var router: MainRouter!
     private var rootNavigationController: UINavigationController!
     
+    //Typically every view needs these pieces
+    //so they are stateless singletons (should not be a memory concern)
     private var networkInteractor: NetworkInteractor = NetworkInteraction()
     private var persistenceInteractor: PersistenceInteractor = PersistenceInteraction()
-    private var modelInteractor: ModelInteractor {
+    private lazy var modelInteractor: ModelInteractor = {
         return ModelInteraction(networkInteractor: self.networkInteractor, persistenceInteractor: self.persistenceInteractor)
-    }
+    }()
+}
 
-    // MARK: - Presenters
+// MARK: - Presenters
+extension DependencyRegistry {
+
     private var firstViewPresenter: FirstViewPresenter {
         return FirstViewPresenter(modelInteractor: modelInteractor)
     }
     
     private var yetAnotherPresenter: YetAnotherPresenter {
-        return YetAnotherPresenter()
+        return YetAnotherPresenter(modelInteractor: modelInteractor)
     }
+}
 
-    // MARK: - View Controllers
+// MARK: - View Controllers
+extension DependencyRegistry {
+    
     public var firstViewController: FirstViewController {
         let vc = FirstViewController.newInstance
             vc.inject(presenter: firstViewPresenter, router: router)

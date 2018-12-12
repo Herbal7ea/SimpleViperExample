@@ -23,6 +23,7 @@
 		72F555A121C09D2F009EAFB0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5559F21C09D2F009EAFB0 /* FirstViewController.swift */; };
 		72F555A221C09D2F009EAFB0 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F555A021C09D2F009EAFB0 /* FirstViewController.xib */; };
 		72F555A421C0A187009EAFB0 /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A321C0A187009EAFB0 /* FirstViewPresenter.swift */; };
+		72F555A721C0A6A3009EAFB0 /* YetAnotherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A621C0A6A3009EAFB0 /* YetAnotherPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		72F5559F21C09D2F009EAFB0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		72F555A021C09D2F009EAFB0 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		72F555A321C0A187009EAFB0 /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
+		72F555A621C0A6A3009EAFB0 /* YetAnotherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetAnotherPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,6 @@
 				72F5552321BF8572009EAFB0 /* Feature */,
 				72F5550321BF84DE009EAFB0 /* AppDelegate.swift */,
 				72F5550521BF84DE009EAFB0 /* MainViewController.swift */,
-				72F5559621BFB399009EAFB0 /* YetAnotherViewController.swift */,
 				72F5550721BF84DE009EAFB0 /* Main.storyboard */,
 				72F5550A21BF84E0009EAFB0 /* Assets.xcassets */,
 				72F5550C21BF84E0009EAFB0 /* LaunchScreen.storyboard */,
@@ -126,6 +127,7 @@
 		72F5552321BF8572009EAFB0 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				72F555A521C0A696009EAFB0 /* YetAnotherViewController */,
 				72F5559E21C09D10009EAFB0 /* FirstViewController */,
 			);
 			path = Feature;
@@ -189,6 +191,15 @@
 				72F555A021C09D2F009EAFB0 /* FirstViewController.xib */,
 			);
 			path = FirstViewController;
+			sourceTree = "<group>";
+		};
+		72F555A521C0A696009EAFB0 /* YetAnotherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72F555A621C0A6A3009EAFB0 /* YetAnotherPresenter.swift */,
+				72F5559621BFB399009EAFB0 /* YetAnotherViewController.swift */,
+			);
+			path = YetAnotherViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 				72F5552F21BF86E6009EAFB0 /* MainRouter.swift in Sources */,
 				72F555A421C0A187009EAFB0 /* FirstViewPresenter.swift in Sources */,
 				72F5550421BF84DE009EAFB0 /* AppDelegate.swift in Sources */,
+				72F555A721C0A6A3009EAFB0 /* YetAnotherPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

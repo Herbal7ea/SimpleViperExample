@@ -23,16 +23,6 @@ class MainRouter {
         self.rootNavigationController = rootNavigationController
     }
     
-    func handleLaunchSampleTapped(_ someSampleInfoToPassOn: String) {
-        let someLaunchingViewController = rootNavigationController! //could be a different VC
-        
-        sampleFrameworkNavigationCoordinator = SampleFrameworkNavigationCoordination(with: someLaunchingViewController)
-        sampleFrameworkNavigationCoordinator!.beginSampleFlow(someSampleInfoToPassOn) {
-            print("done 🎉")
-            self.goToNextView()
-        }
-    }
-    
     func goToNextView() {
         rootNavigationController.dismiss(animated: true) {
             self.goToAnotherView()
@@ -54,6 +44,16 @@ class MainRouter {
 extension MainRouter {
     func doSomethingTapped() {
         print("Some Action from the Router 🦄🎉")
+    }
+    
+    func handleLaunchSampleTapped(_ someSampleInfoToPassOn: String) {
+        let someLaunchingViewController = rootNavigationController! //could be a different VC
+        
+        sampleFrameworkNavigationCoordinator = SampleFrameworkNavigationCoordination(with: someLaunchingViewController)
+        sampleFrameworkNavigationCoordinator!.beginSampleFlow(someSampleInfoToPassOn) {
+            print("done 🎉")
+            self.goToNextView()
+        }
     }
 }
 
