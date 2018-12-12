@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol ModelInteractor {
-    
+    func getUser(for id: String, onResult: @escaping UserResultClosure)
 }
 
 public class ModelInteraction: ModelInteractor {
@@ -20,6 +20,17 @@ public class ModelInteraction: ModelInteractor {
     public init(networkInteractor: NetworkInteractor, persistenceInteractor: PersistenceInteractor) {
         self.networkInteractor = networkInteractor
         self.persistenceInteractor = persistenceInteractor
+    }
+    
+    public func getUser(for id: String, onResult: @escaping UserResultClosure) {
+        
+        self.networkInteractor.getUser(for: id) { user in
+            
+            //Model Layer responsible for returning to the main thread after data has been prepared
+            DispatchQueue.main.async {
+                onResult(user)
+            }
+        }
     }
 }
 

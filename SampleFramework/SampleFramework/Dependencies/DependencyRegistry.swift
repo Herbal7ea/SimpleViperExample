@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ModelFramework
 
 class DependencyRegistry {
     
@@ -15,11 +16,11 @@ class DependencyRegistry {
     
 //    //Typically every view needs these pieces
 //    //so they are stateless singletons (should not be a memory concern)
-//    private var networkInteractor: NetworkInteractor = NetworkInteraction()
-//    private var persistenceInteractor: PersistenceInteractor = PersistenceInteraction()
-//    private lazy var modelInteractor: ModelInteractor = {
-//        return ModelInteraction(networkInteractor: self.networkInteractor, persistenceInteractor: self.persistenceInteractor)
-//    }()
+    private var networkInteractor: NetworkInteractor = NetworkInteraction()
+    private var persistenceInteractor: PersistenceInteractor = PersistenceInteraction()
+    private lazy var modelInteractor: ModelInteractor = {
+        return ModelInteraction(networkInteractor: self.networkInteractor, persistenceInteractor: self.persistenceInteractor)
+    }()
     
     init(rootNavigationController: UINavigationController, router: SampleFrameworkRouter) {
         self.router = router
@@ -32,7 +33,7 @@ class DependencyRegistry {
 extension DependencyRegistry {
     
     private var samplePresenter: SamplePresenter {
-        return SamplePresenter()
+        return SamplePresenter(modelInteractor: self.modelInteractor)
     }
 }
 

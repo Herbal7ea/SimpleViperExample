@@ -13,4 +13,7 @@
    <FileRef
       location = "group:ModelFramework/ModelFramework.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:EntityFramework/EntityFramework.xcodeproj">
+   </FileRef>
 </Workspace>

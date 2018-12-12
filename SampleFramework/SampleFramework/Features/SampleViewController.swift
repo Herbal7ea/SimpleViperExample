@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import EntityFramework
 
 public class SampleViewController: UIViewController {
 
+    @IBOutlet weak var userLabel: UILabel!
+    
     private var presenter: SamplePresenter!
     private var navigationCoordinator: SampleFrameworkRouter!
     
     public func inject(_ presenter: SamplePresenter, _ navigationCoordinator: SampleFrameworkRouter) {
         self.presenter = presenter
         self.navigationCoordinator = navigationCoordinator
+        
+        initData()
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    func initData() {
+        presenter.getUser { [weak self] user in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.userLabel.text = user.firstName
+        }
+    }
+    
     @IBAction func doneTapped(_ sender: Any) {
         navigationCoordinator.sampleViewControllerDoneTapped()
     }

@@ -15,6 +15,8 @@
 		72F5559521BFAC82009EAFB0 /* SampleFrameworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5559421BFAC82009EAFB0 /* SampleFrameworkRouter.swift */; };
 		72F555AA21C0A70C009EAFB0 /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A921C0A70C009EAFB0 /* DependencyRegistry.swift */; };
 		72F5560621C0B239009EAFB0 /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5560521C0B239009EAFB0 /* SamplePresenter.swift */; };
+		72F73A4B21C0B73800AA43B9 /* ModelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F73A4A21C0B73800AA43B9 /* ModelFramework.framework */; };
+		72F73A4D21C0B73F00AA43B9 /* EntityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F73A4C21C0B73F00AA43B9 /* EntityFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		72F5559421BFAC82009EAFB0 /* SampleFrameworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFrameworkRouter.swift; sourceTree = "<group>"; };
 		72F555A921C0A70C009EAFB0 /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
 		72F5560521C0B239009EAFB0 /* SamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
+		72F73A4A21C0B73800AA43B9 /* ModelFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ModelFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F73A4C21C0B73F00AA43B9 /* EntityFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EntityFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F73A4D21C0B73F00AA43B9 /* EntityFramework.framework in Frameworks */,
+				72F73A4B21C0B73800AA43B9 /* ModelFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 				72F5553C21BFA56A009EAFB0 /* SampleFramework */,
 				72F5554721BFA56A009EAFB0 /* SampleFrameworkTests */,
 				72F5553B21BFA56A009EAFB0 /* Products */,
+				72F73A4921C0B73800AA43B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,11 +125,20 @@
 		72F5560421C0B222009EAFB0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				72F5560521C0B239009EAFB0 /* SamplePresenter.swift */,
 				72F5558921BFA5E4009EAFB0 /* SampleViewController.swift */,
 				72F5558A21BFA5E4009EAFB0 /* SampleViewController.xib */,
-				72F5560521C0B239009EAFB0 /* SamplePresenter.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		72F73A4921C0B73800AA43B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72F73A4C21C0B73F00AA43B9 /* EntityFramework.framework */,
+				72F73A4A21C0B73800AA43B9 /* ModelFramework.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
