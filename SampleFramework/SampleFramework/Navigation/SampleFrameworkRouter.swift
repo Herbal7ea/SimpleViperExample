@@ -15,15 +15,14 @@ public protocol SampleFrameworkRouter {
     func sampleViewControllerDoneTapped()
 }
 
-public class SampleFrameworkNavigationCoordination: SampleFrameworkRouter {
+public class SampleFrameworkRouterImpl: SampleFrameworkRouter {
 
-    private var rootNavigationController: UINavigationController!
-    
+    private var rootNavigationController: UINavigationController
     private var onFinished: EmptyClosure!
     
-    private var samplePresenter: SamplePresenter {
-        return SamplePresenter()
-    }
+    private lazy var registry = {
+        return DependencyRegistry(rootNavigationController: self.rootNavigationController, router: self)
+    }()
     
     public init(with rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
@@ -32,7 +31,7 @@ public class SampleFrameworkNavigationCoordination: SampleFrameworkRouter {
     public func beginSampleFlow(_ someSampleInfoToPassOn: String, onFinished: @escaping EmptyClosure) {
         self.onFinished = onFinished
         
-        let vc = SampleViewController.newInstance(presenter: samplePresenter, navigationCoordinator: self)
+        let vc = registry.sampleViewController
         rootNavigationController.present(vc, animated: true)
     }
     

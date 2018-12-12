@@ -57,7 +57,7 @@ extension DependencyRegistry {
         self.rootNavigationController = rootNavigationController
         self.router = MainRouter.shared
         
-        router.initialize(with: rootNavigationController)
+        router.initialize(with: rootNavigationController, registry: self)
     }
     
 }

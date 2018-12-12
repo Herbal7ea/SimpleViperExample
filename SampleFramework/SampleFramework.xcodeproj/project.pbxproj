@@ -13,6 +13,7 @@
 		72F5558B21BFA5E4009EAFB0 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5558921BFA5E4009EAFB0 /* SampleViewController.swift */; };
 		72F5558C21BFA5E4009EAFB0 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F5558A21BFA5E4009EAFB0 /* SampleViewController.xib */; };
 		72F5559521BFAC82009EAFB0 /* SampleFrameworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5559421BFAC82009EAFB0 /* SampleFrameworkRouter.swift */; };
+		72F555AA21C0A70C009EAFB0 /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A921C0A70C009EAFB0 /* DependencyRegistry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		72F5558921BFA5E4009EAFB0 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		72F5558A21BFA5E4009EAFB0 /* SampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
 		72F5559421BFAC82009EAFB0 /* SampleFrameworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFrameworkRouter.swift; sourceTree = "<group>"; };
+		72F555A921C0A70C009EAFB0 /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		72F5553C21BFA56A009EAFB0 /* SampleFramework */ = {
 			isa = PBXGroup;
 			children = (
+				72F555A821C0A6F8009EAFB0 /* Dependencies */,
 				72F5559321BFAC71009EAFB0 /* Navigation */,
 				72F5553D21BFA56A009EAFB0 /* SampleFramework.h */,
 				72F5553E21BFA56A009EAFB0 /* Info.plist */,
@@ -101,6 +104,14 @@
 				72F5559421BFAC82009EAFB0 /* SampleFrameworkRouter.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		72F555A821C0A6F8009EAFB0 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				72F555A921C0A70C009EAFB0 /* DependencyRegistry.swift */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			files = (
 				72F5559521BFAC82009EAFB0 /* SampleFrameworkRouter.swift in Sources */,
 				72F5558B21BFA5E4009EAFB0 /* SampleViewController.swift in Sources */,
+				72F555AA21C0A70C009EAFB0 /* DependencyRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
