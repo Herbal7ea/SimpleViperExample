@@ -123,8 +123,8 @@
 		72F5552321BF8572009EAFB0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				72F555A521C0A696009EAFB0 /* YetAnotherViewController */,
 				72F5559E21C09D10009EAFB0 /* FirstViewController */,
+				72F555A521C0A696009EAFB0 /* YetAnotherViewController */,
 			);
 			path = Features;
 			sourceTree = "<group>";

@@ -22,6 +22,7 @@ class MainRouter {
     
     private var sampleRouter: SampleFrameworkRouter?
 
+    private var currentViewController: UIViewController?
     
     func showFirstViewController(from rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
@@ -37,8 +38,8 @@ class MainRouter {
     }
     
     func goToAnotherView() {
-        let vc = registry.yetAnotherViewController
-        rootNavigationController.present(vc, animated: true)
+        currentViewController = registry.yetAnotherViewController
+        rootNavigationController.present(currentViewController!, animated: true)
     }
 }
 
@@ -46,6 +47,7 @@ class MainRouter {
 extension MainRouter {
     func doSomethingTapped() {
         print("Some Action from the Router 🦄🎉")
+        currentViewController?.dismiss(animated: true)
     }
     
     func handleLaunchSampleTapped(_ someSampleInfoToPassOn: String) {
@@ -53,10 +55,13 @@ extension MainRouter {
         
         self.sampleRouter = SampleFrameworkRouterImpl(with: someLaunchingViewController)
         
-        sampleRouter!.beginSampleFlow(someSampleInfoToPassOn) {
+        sampleRouter!.beginSampleFlow(someSampleInfoToPassOn, onFinished: {
             print("done 🎉")
             self.goToNextView()
-        }
+            
+            //clean up unused Routers
+            self.sampleRouter = nil
+        })
     }
 }
 
