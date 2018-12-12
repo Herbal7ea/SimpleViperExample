@@ -1,5 +1,5 @@
 //
-//  FirstViewPresenter.swift
+//  YetAnotherPresenter.swift
 //  RouterExample
 //
 //  Created by herbal7ea on 12/12/18.
@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import ModelFramework
 
-public class FirstViewPresenter {
+class YetAnotherPresenter {
+    
     private var modelInteractor: ModelInteractor
     
     init(modelInteractor: ModelInteractor) {
         self.modelInteractor = modelInteractor
+    }
+    
+    func saveInfo() {
+        print("💻 saving")
     }
 }

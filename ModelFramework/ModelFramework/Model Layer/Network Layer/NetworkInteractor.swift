@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol NetworkInteractor {
+public protocol NetworkInteractor {
     
 }
 
-class NetworkInteraction: NetworkInteractor {
-    
+public class NetworkInteraction: NetworkInteractor {
+    public init() {
+        
+    }
 }

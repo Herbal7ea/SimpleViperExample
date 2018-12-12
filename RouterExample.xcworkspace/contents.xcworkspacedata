@@ -10,4 +10,7 @@
    <FileRef
       location = "group:SandboxExample/SandboxExample.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ModelFramework/ModelFramework.xcodeproj">
+   </FileRef>
 </Workspace>

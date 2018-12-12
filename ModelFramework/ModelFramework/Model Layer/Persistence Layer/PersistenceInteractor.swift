@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol PersistenceInteractor {
+public protocol PersistenceInteractor {
     
 }
 
-class PersistenceInteraction: PersistenceInteractor {
-    
+public class PersistenceInteraction: PersistenceInteractor {
+    public init() {
+        
+    }
 }

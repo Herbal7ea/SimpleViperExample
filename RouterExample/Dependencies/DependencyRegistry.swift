@@ -8,6 +8,7 @@
 
 import UIKit
 import SampleFramework
+import ModelFramework
 
 class DependencyRegistry {
     

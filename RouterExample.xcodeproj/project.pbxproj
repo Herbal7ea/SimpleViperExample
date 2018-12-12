@@ -13,9 +13,6 @@
 		72F5550B21BF84E0009EAFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72F5550A21BF84E0009EAFB0 /* Assets.xcassets */; };
 		72F5550E21BF84E0009EAFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F5550C21BF84E0009EAFB0 /* LaunchScreen.storyboard */; };
 		72F5551921BF84E0009EAFB0 /* RouterExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5551821BF84E0009EAFB0 /* RouterExampleTests.swift */; };
-		72F5552821BF85B5009EAFB0 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5552721BF85B5009EAFB0 /* NetworkInteractor.swift */; };
-		72F5552A21BF85DD009EAFB0 /* PersistenceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5552921BF85DD009EAFB0 /* PersistenceInteractor.swift */; };
-		72F5552C21BF860D009EAFB0 /* ModelInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5552B21BF860D009EAFB0 /* ModelInteractor.swift */; };
 		72F5552F21BF86E6009EAFB0 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5552E21BF86E6009EAFB0 /* MainRouter.swift */; };
 		72F5558F21BFA651009EAFB0 /* SampleFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F5558E21BFA651009EAFB0 /* SampleFramework.framework */; };
 		72F5559221BFA6FE009EAFB0 /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5559121BFA6FE009EAFB0 /* DependencyRegistry.swift */; };
@@ -24,6 +21,7 @@
 		72F555A221C09D2F009EAFB0 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72F555A021C09D2F009EAFB0 /* FirstViewController.xib */; };
 		72F555A421C0A187009EAFB0 /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A321C0A187009EAFB0 /* FirstViewPresenter.swift */; };
 		72F555A721C0A6A3009EAFB0 /* YetAnotherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F555A621C0A6A3009EAFB0 /* YetAnotherPresenter.swift */; };
+		72F5560021C0B0E0009EAFB0 /* ModelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F555FF21C0B0E0009EAFB0 /* ModelFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +45,6 @@
 		72F5551421BF84E0009EAFB0 /* RouterExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouterExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F5551821BF84E0009EAFB0 /* RouterExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterExampleTests.swift; sourceTree = "<group>"; };
 		72F5551A21BF84E0009EAFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72F5552721BF85B5009EAFB0 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
-		72F5552921BF85DD009EAFB0 /* PersistenceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceInteractor.swift; sourceTree = "<group>"; };
-		72F5552B21BF860D009EAFB0 /* ModelInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInteractor.swift; sourceTree = "<group>"; };
 		72F5552E21BF86E6009EAFB0 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		72F5558E21BFA651009EAFB0 /* SampleFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SampleFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F5559121BFA6FE009EAFB0 /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
@@ -58,6 +53,7 @@
 		72F555A021C09D2F009EAFB0 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		72F555A321C0A187009EAFB0 /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
 		72F555A621C0A6A3009EAFB0 /* YetAnotherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YetAnotherPresenter.swift; sourceTree = "<group>"; };
+		72F555FF21C0B0E0009EAFB0 /* ModelFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ModelFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F5560021C0B0E0009EAFB0 /* ModelFramework.framework in Frameworks */,
 				72F5558F21BFA651009EAFB0 /* SampleFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,8 +100,7 @@
 			children = (
 				72F5559021BFA6EA009EAFB0 /* Dependencies */,
 				72F5552D21BF86D3009EAFB0 /* Navigation */,
-				72F5552421BF8579009EAFB0 /* Model Layer */,
-				72F5552321BF8572009EAFB0 /* Feature */,
+				72F5552321BF8572009EAFB0 /* Features */,
 				72F5550321BF84DE009EAFB0 /* AppDelegate.swift */,
 				72F5550521BF84DE009EAFB0 /* MainViewController.swift */,
 				72F5550721BF84DE009EAFB0 /* Main.storyboard */,
@@ -124,39 +120,13 @@
 			path = RouterExampleTests;
 			sourceTree = "<group>";
 		};
-		72F5552321BF8572009EAFB0 /* Feature */ = {
+		72F5552321BF8572009EAFB0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				72F555A521C0A696009EAFB0 /* YetAnotherViewController */,
 				72F5559E21C09D10009EAFB0 /* FirstViewController */,
 			);
-			path = Feature;
-			sourceTree = "<group>";
-		};
-		72F5552421BF8579009EAFB0 /* Model Layer */ = {
-			isa = PBXGroup;
-			children = (
-				72F5552621BF858F009EAFB0 /* Persistence Layer */,
-				72F5552521BF8585009EAFB0 /* Network Layer */,
-				72F5552B21BF860D009EAFB0 /* ModelInteractor.swift */,
-			);
-			path = "Model Layer";
-			sourceTree = "<group>";
-		};
-		72F5552521BF8585009EAFB0 /* Network Layer */ = {
-			isa = PBXGroup;
-			children = (
-				72F5552721BF85B5009EAFB0 /* NetworkInteractor.swift */,
-			);
-			path = "Network Layer";
-			sourceTree = "<group>";
-		};
-		72F5552621BF858F009EAFB0 /* Persistence Layer */ = {
-			isa = PBXGroup;
-			children = (
-				72F5552921BF85DD009EAFB0 /* PersistenceInteractor.swift */,
-			);
-			path = "Persistence Layer";
+			path = Features;
 			sourceTree = "<group>";
 		};
 		72F5552D21BF86D3009EAFB0 /* Navigation */ = {
@@ -170,6 +140,7 @@
 		72F5558D21BFA651009EAFB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F555FF21C0B0E0009EAFB0 /* ModelFramework.framework */,
 				72F5558E21BFA651009EAFB0 /* SampleFramework.framework */,
 			);
 			name = Frameworks;
@@ -307,9 +278,6 @@
 				72F555A121C09D2F009EAFB0 /* FirstViewController.swift in Sources */,
 				72F5559221BFA6FE009EAFB0 /* DependencyRegistry.swift in Sources */,
 				72F5559721BFB399009EAFB0 /* YetAnotherViewController.swift in Sources */,
-				72F5552821BF85B5009EAFB0 /* NetworkInteractor.swift in Sources */,
-				72F5552C21BF860D009EAFB0 /* ModelInteractor.swift in Sources */,
-				72F5552A21BF85DD009EAFB0 /* PersistenceInteractor.swift in Sources */,
 				72F5550621BF84DE009EAFB0 /* MainViewController.swift in Sources */,
 				72F5552F21BF86E6009EAFB0 /* MainRouter.swift in Sources */,
 				72F555A421C0A187009EAFB0 /* FirstViewPresenter.swift in Sources */,

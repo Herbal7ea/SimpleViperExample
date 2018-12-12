@@ -8,10 +8,6 @@
 
 import UIKit
 
-public class SamplePresenter {
-    
-}
-
 public class SampleViewController: UIViewController {
 
     private var presenter: SamplePresenter!

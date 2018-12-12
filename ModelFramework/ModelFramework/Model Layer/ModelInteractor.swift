@@ -8,16 +8,16 @@
 
 import Foundation
 
-protocol ModelInteractor {
+public protocol ModelInteractor {
     
 }
 
-class ModelInteraction: ModelInteractor {
+public class ModelInteraction: ModelInteractor {
     
-    var networkInteractor: NetworkInteractor
-    var persistenceInteractor: PersistenceInteractor
+    private var networkInteractor: NetworkInteractor
+    private var persistenceInteractor: PersistenceInteractor
     
-    init(networkInteractor: NetworkInteractor, persistenceInteractor: PersistenceInteractor) {
+    public init(networkInteractor: NetworkInteractor, persistenceInteractor: PersistenceInteractor) {
         self.networkInteractor = networkInteractor
         self.persistenceInteractor = persistenceInteractor
     }
