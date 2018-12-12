@@ -14,15 +14,20 @@ class MainRouter {
     //Singleton for now - If using swingject, this typically lives outside of the Dependency Repository
     static var shared = MainRouter()
     
-    private var registry: DependencyRegistry!
+    private lazy var registry: DependencyRegistry = {
+        DependencyRegistry(with: rootNavigationController, router: self)
+    }()
+    
     private var rootNavigationController: UINavigationController!
     
     private var sampleRouter: SampleFrameworkRouter?
 
     
-    func initialize(with rootNavigationController: UINavigationController, registry: DependencyRegistry) {
+    func showFirstViewController(from rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
-        self.registry = registry
+
+        let vc = registry.firstViewController
+        self.rootNavigationController.pushViewController(vc, animated: false)
     }
     
     func goToNextView() {
@@ -34,11 +39,6 @@ class MainRouter {
     func goToAnotherView() {
         let vc = registry.yetAnotherViewController
         rootNavigationController.present(vc, animated: true)
-    }
-    
-    func showFirstViewController() {
-        let vc = registry.firstViewController
-        rootNavigationController.pushViewController(vc, animated: false)
     }
 }
 

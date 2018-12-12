@@ -11,9 +11,7 @@ import SampleFramework
 
 class DependencyRegistry {
     
-    static var shared = DependencyRegistry()
-    
-    private var router: MainRouter!
+    private var router: MainRouter
     private var rootNavigationController: UINavigationController!
     
     //Typically every view needs these pieces
@@ -23,6 +21,11 @@ class DependencyRegistry {
     private lazy var modelInteractor: ModelInteractor = {
         return ModelInteraction(networkInteractor: self.networkInteractor, persistenceInteractor: self.persistenceInteractor)
     }()
+    
+    init(with rootNavigationController: UINavigationController, router: MainRouter) {
+        self.rootNavigationController = rootNavigationController
+        self.router = router
+    }
 }
 
 // MARK: - Presenters
@@ -52,12 +55,4 @@ extension DependencyRegistry {
             vc.inject(preseter: yetAnotherPresenter, navigationCoordinator: router)
         return vc
     }
-    
-    func initialize(with rootNavigationController: UINavigationController) {
-        self.rootNavigationController = rootNavigationController
-        self.router = MainRouter.shared
-        
-        router.initialize(with: rootNavigationController, registry: self)
-    }
-    
 }

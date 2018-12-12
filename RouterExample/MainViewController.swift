@@ -12,13 +12,10 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupRegistry()
-        MainRouter.shared.showFirstViewController()
-    }
-    
-    //only happens in first view
-    func setupRegistry() {
-        DependencyRegistry.shared.initialize(with: navigationController!)
+        
+        //first and only entry point to main router
+        //could move somewhere else.  Suggestions?
+        MainRouter.shared.showFirstViewController(from: navigationController!)
     }
 }
 
