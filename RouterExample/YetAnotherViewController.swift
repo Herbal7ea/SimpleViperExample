@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NextViewPresenter {
+class YetAnotherPresenter {
     func saveInfo() {
         print("💻 saving")
     }
@@ -16,14 +16,14 @@ class NextViewPresenter {
 
 class YetAnotherViewController: UIViewController {
 
-    private var preseter: NextViewPresenter!
+    private var preseter: YetAnotherPresenter!
     private var navigationCoordinator: MainRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    public func prepare(preseter: NextViewPresenter, navigationCoordinator: MainRouter) {
+    public func inject(preseter: YetAnotherPresenter, navigationCoordinator: MainRouter) {
         self.preseter = preseter
         self.navigationCoordinator = navigationCoordinator
     }
@@ -36,6 +36,13 @@ class YetAnotherViewController: UIViewController {
     static var storyboardId = "YetAnotherViewController"
 }
 
-extension UIViewController {
+extension YetAnotherViewController {
+    static var newInstance: YetAnotherViewController {
+        return UIViewController.yetAnotherViewController
+    }
+}
+
+//example of using a storyboard instead of a xib
+private extension UIViewController {
     static var yetAnotherViewController = UIStoryboard.main.instantiateViewController(withIdentifier: YetAnotherViewController.storyboardId) as! YetAnotherViewController
 }

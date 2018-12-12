@@ -18,10 +18,6 @@ class MainRouter {
     
     private var sampleFrameworkNavigationCoordinator: SampleFrameworkRouter?
 
-    private var nextViewPresenter: NextViewPresenter {
-        return NextViewPresenter()
-    }
-    
     
     func initialize(with rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
@@ -44,11 +40,18 @@ class MainRouter {
     }
     
     func goToAnotherView() {
-        let vc = UIViewController.yetAnotherViewController
-            vc.prepare(preseter: nextViewPresenter, navigationCoordinator: self)
+        let vc = DependencyRegistry.shared.yetAnotherViewController
         rootNavigationController.present(vc, animated: true)
     }
     
+    func showFirstViewController() {
+        let vc = DependencyRegistry.shared.firstViewController
+        rootNavigationController.pushViewController(vc, animated: false)
+    }
+}
+
+//MARK: - UI Events
+extension MainRouter {
     func doSomethingTapped() {
         print("Some Action from the Router 🦄🎉")
     }

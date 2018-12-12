@@ -10,26 +10,15 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private var navigationCoordinator: MainRouter!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRegistry()
-        DependencyRegistry.shared.prepare(self)
+        MainRouter.shared.showFirstViewController()
     }
     
     //only happens in first view
     func setupRegistry() {
         DependencyRegistry.shared.initialize(with: navigationController!)
-    }
-    
-    func inject(navigationCoordinator: MainRouter) {
-        self.navigationCoordinator = navigationCoordinator
-    }
-
-    @IBAction func launchSampleTapped(_ sender: Any) {
-        let someSampleInfoToPassOn = "I❤🦄"
-        navigationCoordinator.handleLaunchSampleTapped(someSampleInfoToPassOn)
     }
 }
 
