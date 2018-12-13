@@ -30,13 +30,11 @@ class YetAnotherViewController: UIViewController {
     static var storyboardId = "YetAnotherViewController"
 }
 
+//MARK: - Static Methods
 extension YetAnotherViewController {
     static var newInstance: YetAnotherViewController {
-        return UIViewController.yetAnotherViewController
+        return YetAnotherViewController(nibName: YetAnotherViewController.nibName, bundle: nil)
     }
-}
-
-//example of using a storyboard instead of a xib
-private extension UIViewController {
-    static var yetAnotherViewController = UIStoryboard.main.instantiateViewController(withIdentifier: YetAnotherViewController.storyboardId) as! YetAnotherViewController
+    
+    static var nibName: String = "YetAnotherViewController"
 }

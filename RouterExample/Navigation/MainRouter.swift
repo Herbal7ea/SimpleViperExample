@@ -23,12 +23,13 @@ class MainRouter {
     private var sampleRouter: SampleFrameworkRouter?
 
     private var currentViewController: UIViewController?
-    
-    func showFirstViewController(from rootNavigationController: UINavigationController) {
-        self.rootNavigationController = rootNavigationController
 
-        let vc = registry.firstViewController
-        self.rootNavigationController.pushViewController(vc, animated: false)
+    public var firstViewController: UIViewController {
+        return registry.firstViewController
+    }
+    
+    func initialize(with rootNavigationController: UINavigationController) {
+        self.rootNavigationController = rootNavigationController
     }
     
     func goToNextView() {

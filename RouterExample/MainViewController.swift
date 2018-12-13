@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
         
         //first and only entry point to main router
         //could move somewhere else.  Suggestions?
-        MainRouter.shared.showFirstViewController(from: navigationController!)
+        
     }
 }
 
